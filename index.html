@@ -6470,7 +6470,7 @@ main { flex: 1; display: flex; gap: 12px; padding: 12px; min-height: 0; }
     const save = loadSave(), done = LEVELS.filter((_, i) => save.stars[i] > 0).length, stars = LEVELS.reduce((a, _, i) => a + (save.stars[i] || 0), 0);
     let nextI = LEVELS.findIndex((_, i) => !(save.stars[i] > 0)); if (nextI < 0) nextI = LEVELS.length - 1;
     $('home').innerHTML = `<div class="home-in">
-      <h1>🛠️ Tiệm <span>Sửa Mạch</span></h1>
+      <h1>🛠️ <span>deni</span></h1>
       <p class="tag">Mô phỏng nghề sửa chữa điện tử. Mỗi ải là một máy khách mang tới: không ai nói cho bạn món nào hỏng. Tự soi kính lúp, tự đo bằng đồng hồ và máy hiện sóng, tự tháo linh kiện ra thử, tra datasheet khi cần — rồi thay đúng thứ hỏng và bàn giao. Vượt ải trước mới mở ải sau.</p>
       <p class="home-who">Thợ đang chơi: <b>${who}</b> · Quỹ tiệm: <b style="color:${save.money < 0 ? '#ff7a6a' : '#58d68d'}">${money(save.money)}</b> · Lãi ròng xếp hạng: <b>${money(total(save))}</b> <button data-home="who" style="margin-left:10px">👤 Đổi người chơi</button></p>
       <div class="home-top">
